@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Olam-SVI</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="clearfix">
+        <img id="logotype" src="images/logo.png">
+        <form action="#">
+            <input type="search" name="search" placeholder="Search by type or item number" />
+            <input type="submit" name="submit" value=" " />
+        </form>
+        <div class="header-link">
+            <a href="#" class="authorization-link">Sign up</a>
+            <a href="#" class="authorization-link">Log in</a>
+        </div>
+    </header>
+    <div id="content">
+        <nav>
+            <a href="#" class="menu-link">Tomatoes <img src="images/pointer.png"/></a>
+            <a href="#" class="menu-link">Garlic <img src="images/pointer.png"/></a>
+            <a href="#" class="menu-link">Onions <img src="images/pointer.png"/></a>
+            <a href="#" class="menu-link">Capsicums <img src="images/pointer.png"/></a>
+            <a href="#" class="menu-link">Spices <img src="images/pointer.png"/></a>
+            <a href="#" class="menu-link">Purees <img src="images/pointer.png"/></a>
+        </nav>
+        <div id="slider-container">
+            <div class="slide">
+                <img src="images/slider-1.jpg" alt="A man with boxes" />
+                <img id="moto" src="images/moto.png" />
+            </div>
+            <div  class="slide">
+                <img src="images/slide-2.jpg" alt="Let it be" />
+            </div>
+            <div class="slide">
+                <img src="images/slide-3.jpg" alt="I'll be back'" />
+            </div>
+            <div style="text-align: center">
+                <span class="dot active" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="products-block clearfix">
+            <span class="title clearfix">Popular products</span>
+            <div class="main-products-block clearfix">
+                <div class="product-item">
+                    <img src="images/onion.png" alt="Onion"/><br/>
+                    <a href="#">Powdered Onion, Special</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/tomato.png" alt="Tomato"/><br/>
+                    <a href="#">3/4" Diced Tomatoin Juice</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/garlic.png" alt="Garlic"/><br/>
+                    <a href="#">Chopped Garlic</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/paprika.png" alt="Paprika"/><br/>
+                    <a href="#">Liberty Gem Paprika 120 ASTA</a>
+                </div>
+            </div>
+            <hr>
+            <span class="title">Purchase by category</span>
+            <div class="all-products-block clearfix">
+                <div class="category-item">
+                    <a href="#"><img src="images/tomato-category.png" alt="Tomato category"/></a>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="images/garlic-category.png" alt="Garlic category"/></a>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="images/onion-category.png" alt="Onion category"/></a>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="images/capsicums-category.png" alt="Capsicums category"/></a>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="images/spices-category.png" alt="Spices category"/></a>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="images/purees category.png" alt="Purees category"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contacts">
+            <ul>
+                <li>East River Park, Suite 310</li>
+                <li>Fresno, CA 93728</li>
+                <li>T: +559 567 3987</li>
+                <li>F: +559 567 3988</li>
+            </ul>
+            <small>© 2007 All rights reserved</small>
+        </div>
+        <div class="footer-menu">
+            <span>Products</span><br>
+            <a href="#">Tomatoes</a>
+            <a href="#">Garlic</a>
+            <a href="#">Onion</a>
+            <a href="#">Capsicum</a>
+            <a href="#">Spices</a>
+            <a href="#">Purees</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="images/twitter.png" alt="Twitter"/>
+            <a href="#"><img src="images/youtube.png" alt="Youtube"/>
+            <a href="#"><img src="images/in.png" alt="In"/></a>
+        </div>
+    </footer>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+            showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1;
+            } 
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; 
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block"; 
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
