@@ -183,3 +183,63 @@ small {
 .social-icons a:hover {
     opacity: 0.5;
 }
+
+@media only screen and (max-width: 425px) {
+    #logotype {
+        width: 24%;
+    }
+    form {
+        margin: 0.3em 0 0.3em 3em;
+    }
+    input[type="search"] {
+        width: 17em;
+        height: 2em;
+        font-size: 1.5em;
+    }
+    .authorization-link, .menu-link, .product-item a {
+        font-size: 2em;
+    }
+    .authorization-link:first-of-type {
+        border: none;
+    }
+    #moto {
+        width: 115%;
+        left: 18em;
+        top: 20em;
+        height: 265px;
+    }
+    .title {
+        font-size: 3em;
+    }
+    .product-item {
+        width: 32%;
+        margin-left: 134px
+    }
+    .product-item img {
+        width: 66%;
+    }
+    .category-item {
+        width: 50%;
+    }
+    .category-item a img {
+        width: 85%;
+    }
+    footer {
+        height: 250px;
+    }
+    .contacts ul, .footer-menu span, .footer-menu a {
+        font-size: 1.5em;
+    }
+    small {
+        margin-left: 13%;
+        font-size: 1.2em;
+    }
+    .social-icons a img {
+        width: 5em;
+    }
+    .social-icons {
+        margin-top: 14%;
+        margin-right: -56%
+    }
+
+}
