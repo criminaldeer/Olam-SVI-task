@@ -1,7 +1,8 @@
 body {
     min-width: 1080px;
+    min-height: 100%;
     width: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
     margin: 0 auto;
 }
 .clearfix:after {
@@ -17,12 +18,12 @@ header {
     width: 100%;
 }
 #logotype {
-    margin: 0em 0.6em 0.6em 0.6em;
+    margin: 0em 0em 0.5em 2em;
     float: left;
 }
 form {
     float: left;
-    margin: 0.3em 0 0.3em 6em;
+    margin-left: 10em;
 }
 input[type="search"] {
     width: 25em;
@@ -59,6 +60,9 @@ input:focus {
 .authorization-link:first-of-type {
     border-right: 2px solid black;
 }
+#content {
+    padding-bottom: 200px;
+}
 nav {
     padding-top: 1em;
     background-color: black;
@@ -73,15 +77,17 @@ nav {
     color: white;
     text-decoration: none;
 }
+.slide {
+    position: relative;
+}
 .slide img {
     width: 100%;
     height: 500px;
-    position: relative;
 }
 #moto {
-    width: 43%;
-    left: 23.5em;
-    top: 19em;
+    max-width: 50%;
+    left: 21.5em;
+    top: 7em;
     height: 226px;
     position: absolute;
 }
@@ -104,6 +110,11 @@ nav {
     font-size: 2.5em;
     font-weight: bold;
     text-transform: uppercase;
+}
+.main-products-block, .all-products-block {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
 }
 .product-item {
     float: left;
@@ -136,7 +147,7 @@ hr {
 footer {
     width: 100%;
     height: 200px;
-    margin-top: 4%;
+    margin-top: -200px;
     background-color: #333333;
     color: #6c6c6c;
 }
@@ -186,17 +197,35 @@ small {
     opacity: 0.5;
 }
 
+@media only screen and (max-width: 1024px) {
+    .social-icons {
+        margin-right: -36%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #moto {
+        left: 19.5em;
+    }
+    .social-icons {
+        margin-right: -48%;
+    }
+}
+
 @media only screen and (max-width: 425px) {
     #logotype {
         width: 24%;
     }
     form {
-        margin: 0.3em 0 0.3em 3em;
+        margin-left: 2em;
     }
     input[type="search"] {
         width: 17em;
         height: 2em;
         font-size: 1.5em;
+    }
+    input[type="submit"] {
+        height: 49px;
     }
     .authorization-link, .menu-link, .product-item a {
         font-size: 2em;
@@ -204,21 +233,21 @@ small {
     .authorization-link:first-of-type {
         border: none;
     }
+    #content {
+        padding-bottom: 250px;
+    }
     #moto {
-        width: 115%;
         left: 18em;
-        top: 20em;
-        height: 265px;
     }
     .title {
         font-size: 3em;
     }
     .product-item {
-        width: 32%;
+        width: 24%;
         margin-left: 134px
     }
     .product-item img {
-        width: 66%;
+        width: 100%;
     }
     .category-item {
         width: 50%;
@@ -227,6 +256,7 @@ small {
         width: 85%;
     }
     footer {
+        margin-top: -250px;
         height: 250px;
     }
     .contacts ul, .footer-menu span, .footer-menu a {
