@@ -115,6 +115,9 @@ nav {
     font-size: 1em;
     color: black;
 }
+.dot-block {
+    text-align: center;
+}
 hr {
     height: 0.2em;
     background-color: black;
