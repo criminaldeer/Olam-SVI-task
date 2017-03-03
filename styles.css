@@ -27,13 +27,15 @@ form {
 input[type="search"] {
     width: 25em;
     padding-left: 0.5em;
-    height: 3em;
+    height: 40px;
     font-size: 0.8em;
     border-color: #698716;
+    vertical-align: bottom;
 }
 input[type="submit"] {
-    width: 3.5em;
-    height: 2.9em;
+    vertical-align: bottom;
+    width: 49px;
+    height: 40px;
     margin-left: -0.278em;
     border: none;
     background: transparent;
